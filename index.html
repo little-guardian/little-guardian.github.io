@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Little Guardian | Know they're safe, before you have to ask</title>
+<meta name="description" content="Real-time location and heart-rate monitoring built for the people you care for. Gentle alerts, safe places, and a PIN that keeps monitoring in the right hands." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="noise" aria-hidden="true"></div>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#top" class="wordmark">
+        <span class="wordmark-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="22" height="22">
+            <circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="2"/>
+            <circle cx="16" cy="16" r="3.2" fill="currentColor"/>
+          </svg>
+        </span>
+        Little Guardian
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#how">How it works</a>
+        <a href="#features">Protection</a>
+        <a href="#trust">Trust</a>
+      </nav>
+
+      <a href="#early-access" class="btn btn-small btn-ink">Get early access</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow reveal">Real‑time location &amp; heart rate</p>
+          <h1 class="hero-title reveal">
+            Know they're safe,
+            <span class="hero-title-line">before you have to ask.</span>
+          </h1>
+          <p class="hero-sub reveal">
+            Little Guardian watches over the people you love with live location,
+            gentle heart‑rate monitoring, and a quiet alert the moment they leave
+            a safe place. Built for peace of mind — not surveillance.
+          </p>
+          <div class="hero-actions reveal">
+            <a href="#early-access" class="btn btn-primary">Join early access</a>
+            <a href="#how" class="btn btn-ghost">
+              <span class="play-dot" aria-hidden="true"></span>
+              See how it works
+            </a>
+          </div>
+
+          <div class="hero-proof reveal">
+            <div class="proof-item">
+              <span class="proof-num">24/7</span>
+              <span class="proof-label">Live watch</span>
+            </div>
+            <div class="proof-divider" aria-hidden="true"></div>
+            <div class="proof-item">
+              <span class="proof-num">&lt;3s</span>
+              <span class="proof-label">Alert time</span>
+            </div>
+            <div class="proof-divider" aria-hidden="true"></div>
+            <div class="proof-item">
+              <span class="proof-num">1 PIN</span>
+              <span class="proof-label">Only you control it</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="pulse-stage">
+            <svg class="pulse-svg" viewBox="0 0 420 420" fill="none">
+              <circle class="pulse-ring pulse-ring-outer" cx="210" cy="210" r="176"/>
+              <circle class="pulse-ring pulse-ring-inner" cx="210" cy="210" r="176" stroke-dasharray="4 10"/>
+              <path class="pulse-line" id="pulseLine"
+                d="M 20 230
+                   L 110 230
+                   L 128 230
+                   L 140 170
+                   L 156 288
+                   L 172 230
+                   L 190 230
+                   L 210 130
+                   L 230 320
+                   L 248 230
+                   L 400 230"
+                stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle class="pulse-dot" cx="210" cy="230" r="7"/>
+            </svg>
+
+            <div class="chip chip-safe">
+              <span class="chip-dot"></span>
+              Inside Safe Zone
+            </div>
+            <div class="chip chip-bpm">
+              <span class="chip-bpm-value" id="bpmValue">82</span>
+              <span class="chip-bpm-unit">BPM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll-cue reveal" aria-hidden="true">
+        <span></span>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE STRIP ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Families</span><span class="marquee-dot">·</span>
+        <span>Daycares</span><span class="marquee-dot">·</span>
+        <span>Home care teams</span><span class="marquee-dot">·</span>
+        <span>Aging parents</span><span class="marquee-dot">·</span>
+        <span>After‑school programs</span><span class="marquee-dot">·</span>
+        <span>Families</span><span class="marquee-dot">·</span>
+        <span>Daycares</span><span class="marquee-dot">·</span>
+        <span>Home care teams</span><span class="marquee-dot">·</span>
+        <span>Aging parents</span><span class="marquee-dot">·</span>
+        <span>After‑school programs</span><span class="marquee-dot">·</span>
+      </div>
+    </div>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="how" id="how">
+      <div class="section-inner">
+        <p class="eyebrow reveal">How it works</p>
+        <h2 class="section-title reveal">Three small things, watched constantly.</h2>
+
+        <div class="stages">
+          <article class="stage reveal">
+            <div class="stage-head">
+              <span class="stage-mono">STAGE 01</span>
+              <span class="stage-line" aria-hidden="true"></span>
+            </div>
+            <h3>Wear</h3>
+            <p>A small, comfortable beacon clips on or wears like a watch — light enough to forget it's there.</p>
+          </article>
+
+          <article class="stage reveal">
+            <div class="stage-head">
+              <span class="stage-mono">STAGE 02</span>
+              <span class="stage-line" aria-hidden="true"></span>
+            </div>
+            <h3>Watch</h3>
+            <p>Location and heart rate sync to your phone in real time, quietly, in the background.</p>
+          </article>
+
+          <article class="stage reveal">
+            <div class="stage-head">
+              <span class="stage-mono">STAGE 03</span>
+              <span class="stage-line" aria-hidden="true"></span>
+            </div>
+            <h3>Know</h3>
+            <p>Get a gentle alert the moment they leave a safe place. Nothing more, nothing less.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURES ============ -->
+    <section class="features" id="features">
+      <div class="section-inner">
+        <p class="eyebrow reveal">What's watching</p>
+        <h2 class="section-title reveal">Protection that stays out of the way.</h2>
+
+        <div class="feature-rows">
+
+          <article class="feature-row reveal">
+            <div class="feature-visual">
+              <div class="geofence-demo">
+                <div class="geofence-ring"></div>
+                <div class="geofence-ring geofence-ring-2"></div>
+                <div class="geofence-dot"></div>
+                <span class="geofence-label">Little Stars Daycare</span>
+              </div>
+            </div>
+            <div class="feature-copy">
+              <span class="feature-index">Safe Places</span>
+              <h3>Draw it once. Watch it forever.</h3>
+              <p>Set a safe place around home, school, or grandma's — then get a quiet ping the instant someone steps outside it. No maps to babysit, no refreshing.</p>
+            </div>
+          </article>
+
+          <article class="feature-row feature-row-reverse reveal">
+            <div class="feature-visual">
+              <div class="bpm-demo">
+                <svg viewBox="0 0 260 90" class="bpm-demo-line">
+                  <polyline id="bpmDemoLine" points="0,45 40,45 55,45 65,15 75,75 85,45 100,45 130,45 145,20 160,70 175,45 260,45" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                </svg>
+                <div class="bpm-demo-readout">
+                  <span class="bpm-demo-num">82</span>
+                  <span class="bpm-demo-unit">bpm · normal</span>
+                </div>
+              </div>
+            </div>
+            <div class="feature-copy">
+              <span class="feature-index">Heart Rate, Simply</span>
+              <h3>A steady number, so a change stands out.</h3>
+              <p>A plain heart‑rate reading, watched continuously — so a spike or a sudden drop never goes unnoticed, without turning a phone into a hospital monitor.</p>
+            </div>
+          </article>
+
+          <article class="feature-row reveal">
+            <div class="feature-visual">
+              <div class="pin-demo">
+                <div class="pin-demo-lock">🔒</div>
+                <div class="pin-demo-dots">
+                  <span class="pin-demo-dot pin-demo-dot-filled"></span>
+                  <span class="pin-demo-dot pin-demo-dot-filled"></span>
+                  <span class="pin-demo-dot pin-demo-dot-filled"></span>
+                  <span class="pin-demo-dot"></span>
+                </div>
+              </div>
+            </div>
+            <div class="feature-copy">
+              <span class="feature-index">Locked to Your PIN</span>
+              <h3>Only you can turn it off.</h3>
+              <p>A PIN protects monitoring from being disabled by accident — or on purpose. Every attempt is logged, so tampering never happens quietly.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRUST ============ -->
+    <section class="trust" id="trust">
+      <div class="section-inner">
+        <p class="eyebrow eyebrow-light reveal">Built to protect, not to watch everything</p>
+        <h2 class="trust-title reveal">Your family's data stays your family's.</h2>
+        <p class="trust-sub reveal">
+          Little Guardian was designed around one rule: collect only what keeps
+          someone safe, and put every control in the hands of the people who
+          love them.
+        </p>
+
+        <div class="trust-grid">
+          <div class="trust-card reveal">
+            <span class="trust-card-icon" aria-hidden="true">◐</span>
+            <h3>No public visibility</h3>
+            <p>Location and vitals are visible only to the guardians and caregivers you approve — never public, never sold.</p>
+          </div>
+          <div class="trust-card reveal">
+            <span class="trust-card-icon" aria-hidden="true">◑</span>
+            <h3>Every change, logged</h3>
+            <p>Geofence edits, monitoring toggles, and PIN attempts are all recorded, so nothing changes without a trace.</p>
+          </div>
+          <div class="trust-card reveal">
+            <span class="trust-card-icon" aria-hidden="true">◒</span>
+            <h3>You hold the PIN</h3>
+            <p>Monitoring can only be paused by whoever holds the PIN — not the device, not the person wearing it, not us.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA / EARLY ACCESS ============ -->
+    <section class="cta" id="early-access">
+      <div class="section-inner cta-inner">
+        <p class="eyebrow reveal">Early access</p>
+        <h2 class="cta-title reveal">Little Guardian is coming to families first.</h2>
+        <p class="cta-sub reveal">
+          We're onboarding families, daycares, and care teams in small groups.
+          Leave your email and we'll reach out when a spot opens near you.
+        </p>
+
+        <form class="cta-form reveal" id="ctaForm" novalidate>
+          <label class="visually-hidden" for="ctaEmail">Email address</label>
+          <input type="email" id="ctaEmail" name="email" placeholder="you@example.com" required />
+          <button type="submit" class="btn btn-primary">
+            <span class="btn-label">Notify me</span>
+          </button>
+        </form>
+        <p class="cta-note" id="ctaNote" role="status" aria-live="polite">No spam. One email when it's your turn.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#top" class="wordmark wordmark-footer">
+          <span class="wordmark-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="20" height="20">
+              <circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="2"/>
+              <circle cx="16" cy="16" r="3.2" fill="currentColor"/>
+            </svg>
+          </span>
+          Little Guardian
+        </a>
+        <p>Gentle vigilance for the people you love.</p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <span class="footer-col-title">Product</span>
+          <a href="#how">How it works</a>
+          <a href="#features">Protection</a>
+          <a href="#trust">Trust &amp; privacy</a>
+        </div>
+        <div class="footer-col">
+          <span class="footer-col-title">Console</span>
+          <a href="/admin">Admin console</a>
+          <a href="/u">Guardian app</a>
+        </div>
+        <div class="footer-col">
+          <span class="footer-col-title">Company</span>
+          <a href="#early-access">Early access</a>
+          <a href="mailto:hello@littleguardian.app">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Little Guardian. All rights reserved.</span>
+      <span>Made for the people who watch over people.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
