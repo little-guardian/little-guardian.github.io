@@ -1,13 +1,11 @@
 /* ===========================================================
-   LITTLE GUARDIAN — Landing Page
+   LITTLE GUARDIAN - Landing Page
    Design tokens
-   Color   — paper #FFF7F9, paper-deep #FCEEF1, ink #1E1B1C,
+   Color   - paper #FFF7F9, paper-deep #FCEEF1, ink #1E1B1C,
              ink-black #0B0B0C, rose #E3A9B8, rose-deep #C97B90,
              olive #7F9900 (safe-zone signal), steel #3B637D
-   Type    — display: Fraunces (warm, human serif)
-             body: Inter
-             utility/data: IBM Plex Mono (eyebrows, readouts only)
-   Shape   — soft radii, hairline rules, one signature motif:
+   Type    - Inter throughout, with weight and spacing for hierarchy
+   Shape   - soft radii, hairline rules, one signature motif:
              the pulse-line-into-a-circle (heart rate + geofence
              expressed as a single continuous stroke)
    =========================================================== */
@@ -28,9 +26,9 @@
   --line: rgba(36, 31, 32, 0.12);
   --line-light: rgba(255, 255, 255, 0.16);
 
-  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-display: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-body: "Inter", system-ui, -apple-system, sans-serif;
-  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --font-mono: "Inter", ui-sans-serif, system-ui, sans-serif;
 
   --container: 1160px;
   --radius-sm: 10px;
@@ -1151,3 +1149,251 @@ a {
 .trust-grid .trust-card:nth-child(1) { transition-delay: 0ms; }
 .trust-grid .trust-card:nth-child(2) { transition-delay: 90ms; }
 .trust-grid .trust-card:nth-child(3) { transition-delay: 180ms; }
+
+/* ===================== Theme, polish, and shared pages ===================== */
+:root {
+  --font-display: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+html[data-theme="dark"] {
+  --paper: #111315;
+  --paper-deep: #191c20;
+  --paper-card: #20242a;
+  --ink: #f7f4f2;
+  --ink-soft: #c9c1c3;
+  --ink-black: #f7f4f2;
+  --rose: #d89aaa;
+  --rose-soft: rgba(216, 154, 170, 0.18);
+  --rose-deep: #f0b5c4;
+  --olive: #b9d94a;
+  --olive-bg: rgba(185, 217, 74, 0.14);
+  --steel: #8db9d4;
+  --line: rgba(255, 255, 255, 0.14);
+  --line-light: rgba(255, 255, 255, 0.14);
+}
+
+html[data-theme="dark"] .nav.is-scrolled {
+  background: rgba(17, 19, 21, 0.82);
+}
+
+html[data-theme="dark"] .trust {
+  background: #08090a;
+}
+
+html[data-theme="dark"] .trust-card {
+  background: #121417;
+}
+
+html[data-theme="dark"] .btn-primary,
+html[data-theme="dark"] .btn-ink {
+  background: #f7f4f2;
+  color: #111315;
+}
+
+html[data-theme="dark"] .noise {
+  opacity: 0.02;
+  mix-blend-mode: screen;
+}
+
+body {
+  transition: background 260ms var(--ease), color 260ms var(--ease);
+}
+
+.wordmark {
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.wordmark-mark svg {
+  filter: drop-shadow(0 4px 10px rgba(127, 153, 0, 0.18));
+}
+
+.nav-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.theme-toggle {
+  width: 46px;
+  height: 34px;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--paper-card);
+  color: var(--ink);
+  cursor: pointer;
+  box-shadow: 0 10px 24px -18px rgba(11, 11, 12, 0.4);
+  transition: transform 220ms var(--ease), background 220ms var(--ease);
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px);
+}
+
+.theme-toggle span {
+  font-size: 13px;
+  line-height: 1;
+  opacity: 0.45;
+}
+
+html[data-theme="dark"] .theme-toggle-moon,
+html[data-theme="light"] .theme-toggle-sun {
+  opacity: 1;
+}
+
+.hero-title,
+.section-title,
+.stage h3,
+.feature-copy h3,
+.trust-title,
+.trust-card h3,
+.cta-title {
+  font-weight: 850;
+  letter-spacing: -0.045em;
+}
+
+.hero-title-line {
+  font-style: normal;
+  font-weight: 850;
+}
+
+.stage,
+.feature-visual,
+.trust-card,
+.cta-form input {
+  transition: transform 260ms var(--ease), border-color 260ms var(--ease), background 260ms var(--ease), box-shadow 260ms var(--ease);
+}
+
+.stage:hover,
+.feature-visual:hover,
+.trust-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px -42px rgba(11, 11, 12, 0.45);
+}
+
+.pin-demo-lock {
+  animation: float-soft 3600ms ease-in-out infinite;
+}
+
+@keyframes float-soft {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.legal-main,
+.careers-main {
+  min-height: 100vh;
+  padding: 150px 32px 80px;
+  position: relative;
+  z-index: 2;
+}
+
+.legal-shell,
+.careers-shell {
+  max-width: 880px;
+  margin: 0 auto;
+  background: color-mix(in srgb, var(--paper-card) 92%, transparent);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: clamp(28px, 5vw, 56px);
+  box-shadow: 0 30px 80px -60px rgba(11, 11, 12, 0.5);
+}
+
+.legal-shell h1,
+.careers-title {
+  font-size: clamp(36px, 7vw, 72px);
+  line-height: 0.98;
+  letter-spacing: -0.06em;
+  margin: 0 0 22px;
+}
+
+.legal-shell h2 {
+  margin-top: 34px;
+  font-size: 22px;
+}
+
+.legal-shell p,
+.legal-shell li {
+  color: var(--ink-soft);
+}
+
+.legal-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 30px 0 0;
+}
+
+.legal-nav a {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 13px;
+  text-decoration: none;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+.wave-word {
+  display: inline-flex;
+  gap: 0.02em;
+}
+
+.wave-word span {
+  display: inline-block;
+  animation: wave-letter 1600ms ease-in-out infinite;
+  animation-delay: calc(var(--i) * 80ms);
+}
+
+@keyframes wave-letter {
+  0%, 100% { transform: translateY(0); }
+  35% { transform: translateY(-18px); }
+  70% { transform: translateY(4px); }
+}
+
+@media (max-width: 700px) {
+  .nav-inner {
+    padding: 0 18px;
+    gap: 12px;
+  }
+
+  .wordmark {
+    font-size: 16px;
+  }
+
+  .nav-actions .btn {
+    display: none;
+  }
+
+  .section-inner,
+  .hero-inner,
+  .footer-inner,
+  .footer-bottom {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hero {
+    padding-top: 130px;
+  }
+
+  .hero-actions,
+  .hero-proof {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .proof-divider {
+    display: none;
+  }
+
+  .cta-form .btn,
+  .cta-form input {
+    width: 100%;
+  }
+}

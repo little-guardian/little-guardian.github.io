@@ -3,14 +3,29 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Little Guardian | Know they're safe, before you have to ask</title>
-<meta name="description" content="Real-time location and heart-rate monitoring built for the people you care for. Gentle alerts, safe places, and a PIN that keeps monitoring in the right hands." />
+<title>Little Guardian South Africa | Family safety monitoring</title>
+<meta name="description" content="Little Guardian South Africa helps families and care teams stay close with live location, heart rate awareness, safe place alerts, and privacy-first controls." />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Little Guardian, Little Guardian South Africa, family safety app, child location monitor, heart rate alerts, safe zones South Africa" />
+<meta property="og:title" content="Little Guardian South Africa" />
+<meta property="og:description" content="A gentle family safety experience with live location, heart rate awareness, and safe place alerts." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://little-guardian.github.io/" />
+<meta property="og:image" content="https://little-guardian.github.io/logo.svg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Little Guardian South Africa" />
+<meta name="twitter:description" content="Gentle family safety monitoring for location, heart rate, and safe places." />
+<link rel="canonical" href="https://little-guardian.github.io/" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <script>
+    document.documentElement.dataset.theme = localStorage.getItem("lg-theme") || "light";
+  </script>
 
   <div class="noise" aria-hidden="true"></div>
 
@@ -34,7 +49,13 @@
         <a href="#trust">Trust</a>
       </nav>
 
-      <a href="#early-access" class="btn btn-small btn-ink">Get early access</a>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+          <span class="theme-toggle-sun" aria-hidden="true">☀</span>
+          <span class="theme-toggle-moon" aria-hidden="true">☾</span>
+        </button>
+        <a href="#early-access" class="btn btn-small btn-ink">Get early access</a>
+      </div>
     </div>
   </header>
 
@@ -52,7 +73,7 @@
           <p class="hero-sub reveal">
             Little Guardian watches over the people you love with live location,
             gentle heart‑rate monitoring, and a quiet alert the moment they leave
-            a safe place. Built for peace of mind — not surveillance.
+            a safe place. Built for peace of mind - not surveillance.
           </p>
           <div class="hero-actions reveal">
             <a href="#early-access" class="btn btn-primary">Join early access</a>
@@ -147,7 +168,7 @@
               <span class="stage-line" aria-hidden="true"></span>
             </div>
             <h3>Wear</h3>
-            <p>A small, comfortable beacon clips on or wears like a watch — light enough to forget it's there.</p>
+            <p>A small, comfortable beacon clips on or wears like a watch, light enough to forget it is there.</p>
           </article>
 
           <article class="stage reveal">
@@ -191,7 +212,7 @@
             <div class="feature-copy">
               <span class="feature-index">Safe Places</span>
               <h3>Draw it once. Watch it forever.</h3>
-              <p>Set a safe place around home, school, or grandma's — then get a quiet ping the instant someone steps outside it. No maps to babysit, no refreshing.</p>
+              <p>Set a safe place around home, school, or grandma's, then get a quiet ping the instant someone steps outside it. No maps to babysit, no refreshing.</p>
             </div>
           </article>
 
@@ -210,7 +231,7 @@
             <div class="feature-copy">
               <span class="feature-index">Heart Rate, Simply</span>
               <h3>A steady number, so a change stands out.</h3>
-              <p>A plain heart‑rate reading, watched continuously — so a spike or a sudden drop never goes unnoticed, without turning a phone into a hospital monitor.</p>
+              <p>A simple heart rate reading keeps running in the background, so a spike or sudden drop stands out without turning a phone into a hospital monitor.</p>
             </div>
           </article>
 
@@ -229,7 +250,7 @@
             <div class="feature-copy">
               <span class="feature-index">Locked to Your PIN</span>
               <h3>Only you can turn it off.</h3>
-              <p>A PIN protects monitoring from being disabled by accident — or on purpose. Every attempt is logged, so tampering never happens quietly.</p>
+              <p>A PIN protects monitoring from being disabled by accident or on purpose. Every attempt is logged, so tampering never happens quietly.</p>
             </div>
           </article>
 
@@ -252,7 +273,7 @@
           <div class="trust-card reveal">
             <span class="trust-card-icon" aria-hidden="true">◐</span>
             <h3>No public visibility</h3>
-            <p>Location and vitals are visible only to the guardians and caregivers you approve — never public, never sold.</p>
+            <p>Location and vitals are visible only to the guardians and caregivers you approve. They are never public and never sold.</p>
           </div>
           <div class="trust-card reveal">
             <span class="trust-card-icon" aria-hidden="true">◑</span>
@@ -262,7 +283,7 @@
           <div class="trust-card reveal">
             <span class="trust-card-icon" aria-hidden="true">◒</span>
             <h3>You hold the PIN</h3>
-            <p>Monitoring can only be paused by whoever holds the PIN — not the device, not the person wearing it, not us.</p>
+            <p>Monitoring can only be paused by whoever holds the PIN. Not the device, not the person wearing it, and not us.</p>
           </div>
         </div>
       </div>
@@ -321,7 +342,16 @@
         <div class="footer-col">
           <span class="footer-col-title">Company</span>
           <a href="#early-access">Early access</a>
+          <a href="/careers/">Careers</a>
           <a href="mailto:hello@littleguardian.app">Contact</a>
+        </div>
+        <div class="footer-col">
+          <span class="footer-col-title">Legal</span>
+          <a href="/legal/privacy-policy.html">Privacy policy</a>
+          <a href="/legal/terms-and-conditions.html">Terms and conditions</a>
+          <a href="/legal/data-deletion-request.html">Data deletion request</a>
+          <a href="/legal/disclaimer.html">Disclaimer</a>
+          <a href="/legal/return-policy.html">Return policy</a>
         </div>
       </div>
     </div>

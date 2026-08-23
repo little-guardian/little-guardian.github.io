@@ -5,6 +5,30 @@
     "(prefers-reduced-motion: reduce)"
   ).matches;
 
+
+  /* ---------------------------------------------------------
+     Theme toggle: keeps the site comfortable in light or dark.
+  --------------------------------------------------------- */
+  var themeToggle = document.getElementById("themeToggle");
+  var setTheme = function (theme) {
+    document.documentElement.dataset.theme = theme;
+    localStorage.setItem("lg-theme", theme);
+    if (themeToggle) {
+      var isDark = theme === "dark";
+      themeToggle.setAttribute("aria-pressed", String(isDark));
+      themeToggle.setAttribute(
+        "aria-label",
+        isDark ? "Switch to light theme" : "Switch to dark theme"
+      );
+    }
+  };
+  setTheme(localStorage.getItem("lg-theme") || "light");
+  if (themeToggle) {
+    themeToggle.addEventListener("click", function () {
+      setTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+    });
+  }
+
   /* ---------------------------------------------------------
      Footer year
   --------------------------------------------------------- */
@@ -82,7 +106,7 @@
 
   /* ---------------------------------------------------------
      Hero BPM chip: a gentle, believable live tick so the hero
-     visual feels alive rather than static — small variation
+     visual feels alive rather than static - small variation
      around a resting heart rate, nothing dramatic.
   --------------------------------------------------------- */
   var bpmValueEl = document.getElementById("bpmValue");
@@ -110,14 +134,14 @@
       var isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
       if (!isValidEmail) {
-        ctaNote.textContent = "That email doesn't look quite right — mind checking it?";
+        ctaNote.textContent = "That email does not look quite right. Mind checking it?";
         ctaNote.classList.remove("is-success");
         emailInput.focus();
         return;
       }
 
       ctaForm.classList.add("is-success");
-      ctaNote.textContent = "You're on the list — we'll be in touch soon.";
+      ctaNote.textContent = "You are on the list. We will be in touch soon.";
       ctaNote.classList.add("is-success");
       emailInput.value = "";
       emailInput.blur();
